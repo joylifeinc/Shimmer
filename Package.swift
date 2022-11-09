@@ -16,23 +16,12 @@ let package = Package(
     targets: [
         .target(
             name: "Shimmer",
-            dependencies: [
-                "FBShimmering"
-            ],
-            path: ".",
-            sources: ["Framework"],
-            publicHeadersPath: "Framework",
+            path: "FBShimmering",
+            sources: ["."],
+            publicHeadersPath: "Public",
             cSettings: [
-                .headerSearchPath("FBShimmering")
-            ]
-        ),
-        .target(
-            name: "FBShimmering",
-            path: ".",
-            sources: ["FBShimmering"],
-            publicHeadersPath: "FBShimmering",
-            cSettings: [
-                .headerSearchPath("FBShimmering")
+                .headerSearchPath("."),
+                .headerSearchPath("Public")
             ]
         )
     ]
