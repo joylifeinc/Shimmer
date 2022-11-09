@@ -18,10 +18,9 @@ let package = Package(
             name: "Shimmer",
             path: "FBShimmering",
             sources: ["."],
-            publicHeadersPath: "Public",
+            publicHeadersPath: ".",
             cSettings: [
-                .headerSearchPath("."),
-                .headerSearchPath("Public")
+                .headerSearchPath(".")
             ]
         )
     ]
